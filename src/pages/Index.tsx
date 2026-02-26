@@ -12,10 +12,10 @@ import Contact from "@/components/portfolio/Contact";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Navigation />
       <ThemeToggle />
-      <main>
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Hero />
         <About />
         <Technologies />
@@ -26,7 +26,7 @@ const Index = () => {
         <AiChat />
         <Contact />
       </main>
-      <footer className="border-t-[3px] border-border py-8 text-center">
+      <footer className="border-t-[3px] border-border py-8 text-center px-4">
         <p className="font-pixel text-[8px] text-muted-foreground">
           © 2026 YOUR_NAME • BUILT WITH PIXELS & LOVE
         </p>

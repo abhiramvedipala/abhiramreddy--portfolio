@@ -2,7 +2,7 @@ import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20">
+    <section className="min-h-screen flex items-center justify-center py-20">
       <div className="text-center max-w-3xl">
         <p className="font-pixel text-xs md:text-sm text-primary mb-4 animate-blink">
           {">"} HELLO WORLD_

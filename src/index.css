@@ -26,6 +26,11 @@
     --input: 220 15% 75%;
     --ring: 142 60% 40%;
     --radius: 0px;
+    --chart-1: 142 60% 40%;
+    --chart-2: 200 50% 45%;
+    --chart-3: 35 90% 55%;
+    --chart-4: 0 70% 50%;
+    --chart-5: 280 60% 50%;
 
     --pixel-shadow: 3px 3px 0px hsl(220 20% 14%);
     --pixel-shadow-sm: 2px 2px 0px hsl(220 20% 14%);

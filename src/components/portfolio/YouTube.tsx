@@ -5,7 +5,7 @@ const videos = [
 
 const YouTube = () => {
   return (
-    <section id="videos" className="py-20 px-4">
+    <section id="videos" className="py-20">
       <div className="max-w-4xl mx-auto">
         <h2 className="font-pixel text-lg md:text-xl text-primary mb-12 text-center">
           {"// VIDEOS"}

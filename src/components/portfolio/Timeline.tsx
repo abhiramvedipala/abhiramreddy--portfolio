@@ -8,7 +8,7 @@ const events = [
 
 const Timeline = () => {
   return (
-    <section id="timeline" className="py-20 px-4">
+    <section id="timeline" className="py-20">
       <div className="max-w-3xl mx-auto">
         <h2 className="font-pixel text-lg md:text-xl text-primary mb-12 text-center">
           {"// TIMELINE"}

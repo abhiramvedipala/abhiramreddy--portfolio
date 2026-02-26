@@ -1,0 +1,41 @@
+import pixelAvatar from "@/assets/pixel-avatar.png";
+
+const About = () => {
+  return (
+    <section id="about" className="py-20 px-4">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="font-pixel text-lg md:text-xl text-primary mb-12 text-center">
+          {"// ABOUT ME"}
+        </h2>
+        <div className="flex flex-col md:flex-row gap-10 items-center">
+          <div className="pixel-box bg-card p-2 shrink-0">
+            <img
+              src={pixelAvatar}
+              alt="Pixel art avatar of YOUR_NAME"
+              className="w-48 h-48 md:w-56 md:h-56 object-cover"
+              style={{ imageRendering: "pixelated" }}
+            />
+          </div>
+          <div className="space-y-4">
+            <p className="text-lg md:text-xl leading-relaxed text-foreground">
+              Hey there! I'm a software engineer with 5+ years of experience building web applications,
+              APIs, and developer tools. I love turning complex problems into elegant, simple solutions.
+            </p>
+            <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
+              When I'm not coding, you can find me contributing to open source,
+              experimenting with pixel art, or exploring retro game development.
+              I believe great software is both functional and beautiful.
+            </p>
+            <div className="pixel-box-sm bg-muted p-4 mt-6">
+              <p className="font-pixel text-[8px] text-primary">
+                {">"} STATUS: OPEN TO OPPORTUNITIES
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;

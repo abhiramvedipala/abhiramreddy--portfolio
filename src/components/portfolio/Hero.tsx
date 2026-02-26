@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -19,9 +19,9 @@ const Hero = () => {
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           {[
-          { icon: Github, href: "#", label: "GitHub" },
+          { icon: Github, href: "https://github.com/abhiramvedipala", label: "GitHub" },
           { icon: Linkedin, href: "https://www.linkedin.com/in/abhiram-reddy-vedipala-0a4770309", label: "LinkedIn" },
-          { icon: Twitter, href: "#", label: "Twitter" },
+          { icon: Instagram, href: "https://www.instagram.com/i._abhiram/", label: "Instagram" },
           { icon: Mail, href: "#contact", label: "Email" }].
           map(({ icon: Icon, href, label }) =>
           <a

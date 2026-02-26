@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="flex gap-4 justify-center flex-wrap">
           {[
           { icon: Github, href: "#", label: "GitHub" },
-          { icon: Linkedin, href: "#", label: "LinkedIn" },
+          { icon: Linkedin, href: "https://www.linkedin.com/in/abhiram-reddy-vedipala-0a4770309", label: "LinkedIn" },
           { icon: Twitter, href: "#", label: "Twitter" },
           { icon: Mail, href: "#contact", label: "Email" }].
           map(({ icon: Icon, href, label }) =>

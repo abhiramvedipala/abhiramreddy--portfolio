@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         pixel: ['"Press Start 2P"', 'cursive'],
         "pixel-body": ['"VT323"', 'monospace'],
+        display: ['"Space Grotesk"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

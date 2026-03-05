@@ -28,8 +28,8 @@ const Hero = () => {
             key={label}
             href={href}
             aria-label={label}
+            {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             className="pixel-btn bg-card text-foreground p-3 inline-flex items-center gap-2">
-
               <Icon size={18} />
               <span className="font-pixel text-[8px] hidden sm:inline">{label.toUpperCase()}</span>
             </a>

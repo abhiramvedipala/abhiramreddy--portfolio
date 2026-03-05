@@ -10,7 +10,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Navigation />
-      <ThemeToggle />
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Hero />
         <About />

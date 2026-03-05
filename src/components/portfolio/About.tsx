@@ -28,7 +28,6 @@ const About = () => {
             </p>
             <div className="pixel-box-sm bg-muted p-4 mt-6">
               <p className="font-pixel text-[8px] text-primary">
-                {">"} STATUS: OPEN TO OPPORTUNITIES
               </p>
             </div>
           </div>

@@ -3,16 +3,16 @@ import { Github, Linkedin, Instagram, Mail } from "lucide-react";
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center py-20">
-      <div className="text-center max-w-3xl">
+      <div className="text-center max-w-3xl shadow-none">
         <h1 className="font-pixel text-2xl md:text-4xl lg:text-5xl text-foreground pixel-text-shadow mb-6 leading-relaxed">Abhiram Vedipala
 
         </h1>
         <p className="font-pixel text-[10px] md:text-xs mb-8 bg-primary-foreground text-white">
             Data science and AI ENGINEER
         </p>
-        <p className="text-lg md:text-2xl text-muted-foreground mb-10 max-w-xl mx-auto leading-relaxed">
-          Crafting digital experiences with clean code and creative solutions.
-          Passionate about open source, pixel art, and building things that matter.
+        <p className="md:text-2xl mb-10 max-w-xl mx-auto leading-relaxed text-[#ab1214] text-base font-bold text-center">
+          ​Driven by curiosity. Grounded by logic. Fueled by purpose.
+        
         </p>
         <div className="flex gap-5 justify-center">
           {[

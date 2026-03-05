@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
-import avLogo from "@/assets/av-logo.jpeg";
 
 const links = [
   { label: "About", href: "#about" },
@@ -28,13 +27,9 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
         {/* Logo */}
         <a href="#" className="flex-shrink-0">
-          <div className="w-10 h-10 border-2 border-foreground/20 rounded overflow-hidden hover:border-primary transition-colors">
-            <img
-              src={avLogo}
-              alt="AV Logo"
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <span className="px-2 py-1 border-[3px] border-foreground font-bold text-lg text-foreground hover:border-primary hover:text-primary transition-colors tracking-tight">
+            &lt; AV /&gt;
+          </span>
         </a>
 
         {/* Nav Links + Theme Toggle */}

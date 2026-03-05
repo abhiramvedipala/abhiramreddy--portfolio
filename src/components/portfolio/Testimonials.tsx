@@ -20,8 +20,8 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="py-20">
       <div className="max-w-4xl mx-auto">
-        <h2 className="font-pixel text-lg md:text-xl text-primary mb-12 text-center">
-          {"// TESTIMONIALS"}
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-12 text-center">
+          <span className="text-primary">&lt;/&gt;</span> Testimonials
         </h2>
         <div className="grid gap-6 md:grid-cols-3">
           {testimonials.map((t) => (

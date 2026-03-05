@@ -5,7 +5,6 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center py-20">
       <div className="text-center max-w-3xl">
         <p className="font-pixel text-xs md:text-sm text-primary mb-4 animate-blink">
-          {">"} HELLO WORLD_
         </p>
         <h1 className="font-pixel text-2xl md:text-4xl lg:text-5xl text-foreground pixel-text-shadow mb-6 leading-relaxed">Abhiram Vedipala
 

@@ -3,10 +3,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import Hero from "@/components/portfolio/Hero";
 import About from "@/components/portfolio/About";
 import Technologies from "@/components/portfolio/Technologies";
-import Timeline from "@/components/portfolio/Timeline";
 import Projects from "@/components/portfolio/Projects";
-import YouTube from "@/components/portfolio/YouTube";
-import Testimonials from "@/components/portfolio/Testimonials";
 import AiChat from "@/components/portfolio/AiChat";
 import Contact from "@/components/portfolio/Contact";
 
@@ -19,10 +16,7 @@ const Index = () => {
         <Hero />
         <About />
         <Technologies />
-        <Timeline />
         <Projects />
-        <YouTube />
-        <Testimonials />
         <AiChat />
         <Contact />
       </main>

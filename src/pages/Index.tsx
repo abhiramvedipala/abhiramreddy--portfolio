@@ -6,10 +6,15 @@ import Technologies from "@/components/portfolio/Technologies";
 import Projects from "@/components/portfolio/Projects";
 import AiChat from "@/components/portfolio/AiChat";
 import Contact from "@/components/portfolio/Contact";
+import heroBg from "@/assets/hero-bg.png";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div
+      className="min-h-screen overflow-x-hidden bg-fixed bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${heroBg})` }}
+    >
+      <div className="min-h-screen" style={{ backgroundColor: 'rgba(0,0,0,0.55)' }}>
       <Navigation />
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Hero />
@@ -19,7 +24,7 @@ const Index = () => {
         <AiChat />
         <Contact />
       </main>
-      <footer className="border-t-[3px] border-border py-8 text-center px-4">
+      <footer className="border-t-[3px] border-border/30 py-8 text-center px-4">
         <div className="flex justify-center gap-4 mb-4">
           {[
             { icon: Github, href: "https://github.com/abhiramvedipala", label: "GitHub" },
@@ -42,6 +47,7 @@ const Index = () => {
           © 2026 ABHIRAM VEDIPALA • BUILT WITH PIXELS & LOVE
         </p>
       </footer>
+      </div>
     </div>
   );
 };

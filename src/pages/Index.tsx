@@ -1,5 +1,4 @@
 import Navigation from "@/components/portfolio/Navigation";
-import ThemeToggle from "@/components/ThemeToggle";
 import Hero from "@/components/portfolio/Hero";
 import About from "@/components/portfolio/About";
 import Technologies from "@/components/portfolio/Technologies";

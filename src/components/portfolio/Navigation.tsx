@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Github, Linkedin, Instagram } from "lucide-react";
 
 const links = [
   { label: "About", href: "#about" },
@@ -32,7 +32,7 @@ const Navigation = () => {
           </span>
         </a>
 
-        {/* Nav Links + Theme Toggle */}
+        {/* Nav Links + Social Icons + Theme Toggle */}
         <div className="flex items-center gap-6 sm:gap-8">
           {links.map((l) => (
             <a
@@ -43,13 +43,31 @@ const Navigation = () => {
               {l.label}
             </a>
           ))}
-          <button
-            onClick={() => setDark(!dark)}
-            className="ml-2 p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
-            aria-label="Toggle theme"
-          >
-            {dark ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
+          <div className="flex items-center gap-3 ml-2 border-l border-border/50 pl-4">
+            {[
+              { icon: Github, href: "https://github.com/abhiramvedipala", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/abhiram-reddy-vedipala-0a4770309", label: "LinkedIn" },
+              { icon: Instagram, href: "https://www.instagram.com/i._abhiram/", label: "Instagram" },
+            ].map(({ icon: Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Icon size={18} />
+              </a>
+            ))}
+            <button
+              onClick={() => setDark(!dark)}
+              className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {dark ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+          </div>
         </div>
       </div>
     </nav>

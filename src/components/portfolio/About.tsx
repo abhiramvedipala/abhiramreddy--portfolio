@@ -26,10 +26,6 @@ const About = () => {
               experimenting with pixel art, or exploring retro game development.
               I believe great software is both functional and beautiful.
             </p>
-            <div className="pixel-box-sm bg-muted p-4 mt-6">
-              <p className="font-pixel text-[8px] text-primary">
-              </p>
-            </div>
           </div>
         </div>
       </div>

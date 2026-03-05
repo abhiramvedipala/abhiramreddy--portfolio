@@ -17,23 +17,23 @@ const Hero = () => {
           Crafting digital experiences with clean code and creative solutions.
           Passionate about open source, pixel art, and building things that matter.
         </p>
-        <div className="flex gap-4 justify-center flex-wrap">
+        <div className="flex gap-5 justify-center">
           {[
-          { icon: Github, href: "https://github.com/abhiramvedipala", label: "GitHub" },
-          { icon: Linkedin, href: "https://www.linkedin.com/in/abhiram-reddy-vedipala-0a4770309", label: "LinkedIn" },
-          { icon: Instagram, href: "https://www.instagram.com/i._abhiram/", label: "Instagram" },
-          { icon: Mail, href: "#contact", label: "Email" }].
-          map(({ icon: Icon, href, label }) =>
-          <a
-            key={label}
-            href={href}
-            aria-label={label}
-            {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            className="pixel-btn bg-card text-foreground p-3 inline-flex items-center gap-2">
-              <Icon size={18} />
-              <span className="font-pixel text-[8px] hidden sm:inline">{label.toUpperCase()}</span>
+            { icon: Github, href: "https://github.com/abhiramvedipala", label: "GitHub" },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/abhiram-reddy-vedipala-0a4770309", label: "LinkedIn" },
+            { icon: Instagram, href: "https://www.instagram.com/i._abhiram/", label: "Instagram" },
+            { icon: Mail, href: "#contact", label: "Email" },
+          ].map(({ icon: Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              aria-label={label}
+              {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Icon size={20} />
             </a>
-          )}
+          ))}
         </div>
       </div>
     </section>);

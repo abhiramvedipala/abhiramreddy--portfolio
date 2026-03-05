@@ -1,56 +1,62 @@
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Sun, Moon } from "lucide-react";
+import avLogo from "@/assets/av-logo.jpeg";
 
 const links = [
-  { label: "ABOUT", href: "#about" },
-  { label: "TECH", href: "#tech" },
-  { label: "PROJECTS", href: "#projects" },
-  { label: "CHAT", href: "#chat" },
-  { label: "CONTACT", href: "#contact" },
+  { label: "About", href: "#about" },
+  { label: "Tech", href: "#tech" },
+  { label: "Projects", href: "#projects" },
+  { label: "Chat", href: "#chat" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navigation = () => {
-  const [open, setOpen] = useState(false);
+  const [dark, setDark] = useState(() => {
+    if (typeof window === "undefined") return false;
+    const stored = localStorage.getItem("theme");
+    if (stored) return stored === "dark";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", dark);
+    localStorage.setItem("theme", dark ? "dark" : "light");
+  }, [dark]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 bg-background/90 backdrop-blur-sm border-b-[3px] border-border">
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-        <a href="#" className="font-pixel text-[10px] text-primary">
-          {"<YN />"}
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
+        {/* Logo */}
+        <a href="#" className="flex-shrink-0">
+          <div className="w-10 h-10 border-2 border-foreground/20 rounded overflow-hidden hover:border-primary transition-colors">
+            <img
+              src={avLogo}
+              alt="AV Logo"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </a>
-        <div className="hidden md:flex gap-4 items-center mr-14">
+
+        {/* Nav Links + Theme Toggle */}
+        <div className="flex items-center gap-6 sm:gap-8">
           {links.map((l) => (
             <a
               key={l.label}
               href={l.href}
-              className="font-pixel text-[7px] text-muted-foreground hover:text-primary transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all hover:after:w-full"
             >
               {l.label}
             </a>
           ))}
+          <button
+            onClick={() => setDark(!dark)}
+            className="ml-2 p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
+            aria-label="Toggle theme"
+          >
+            {dark ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
         </div>
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden pixel-btn bg-card text-foreground p-2 mr-14"
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={18} /> : <Menu size={18} />}
-        </button>
       </div>
-      {open && (
-        <div className="md:hidden bg-card border-t-[3px] border-border px-4 py-4 space-y-3">
-          {links.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className="block font-pixel text-[8px] text-muted-foreground hover:text-primary transition-colors"
-            >
-              {l.label}
-            </a>
-          ))}
-        </div>
-      )}
     </nav>
   );
 };

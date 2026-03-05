@@ -1,5 +1,4 @@
 import Navigation from "@/components/portfolio/Navigation";
-import ThemeToggle from "@/components/ThemeToggle";
 import Hero from "@/components/portfolio/Hero";
 import About from "@/components/portfolio/About";
 import Technologies from "@/components/portfolio/Technologies";
@@ -11,7 +10,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Navigation />
-      <ThemeToggle />
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Hero />
         <About />

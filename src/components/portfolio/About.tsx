@@ -13,13 +13,13 @@ const About = () => {
               src={pixelAvatar}
               alt="Pixel art avatar of YOUR_NAME"
               className="w-48 h-48 md:w-56 md:h-56 object-cover"
-              style={{ imageRendering: "pixelated" }}
-            />
+              style={{ imageRendering: "pixelated" }} />
+            
           </div>
           <div className="space-y-4">
             <p className="text-lg md:text-xl leading-relaxed text-foreground">
-              Hey there! I'm a software engineer with 5+ years of experience building web applications,
-              APIs, and developer tools. I love turning complex problems into elegant, simple solutions.
+              Hey there! I'm an Undergraduate  pursuing Data science  experience building web applications, APIs, and developer tools. I love turning complex problems into elegant, simple solutions.
+            
             </p>
             <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
               When I'm not coding, you can find me contributing to open source,
@@ -34,8 +34,8 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default About;

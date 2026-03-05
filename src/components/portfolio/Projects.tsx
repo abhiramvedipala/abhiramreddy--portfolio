@@ -28,8 +28,8 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20">
       <div className="max-w-5xl mx-auto">
-        <h2 className="font-pixel text-lg md:text-xl text-primary mb-12 text-center">
-          {"// PROJECTS"}
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-12 text-center">
+          <span className="text-primary">&lt;/&gt;</span> Projects
         </h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((p) => (

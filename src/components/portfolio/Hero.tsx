@@ -1,8 +1,12 @@
 import { Github, Linkedin, Instagram, Mail } from "lucide-react";
+import heroBg from "@/assets/hero-bg.png";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen py-20 flex items-center justify-center">
+    <section
+      className="min-h-screen py-20 flex items-center justify-center bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${heroBg})` }}
+    >
       <div className="text-center max-w-3xl shadow-none">
         <h1 className="font-pixel md:text-4xl lg:text-5xl text-foreground pixel-text-shadow mb-6 leading-relaxed text-4xl">Abhiram Vedipala
 

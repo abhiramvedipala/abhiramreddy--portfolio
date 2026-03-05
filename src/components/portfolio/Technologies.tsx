@@ -7,7 +7,7 @@ const techs = [
 
 const Technologies = () => {
   return (
-    <section id="tech" className="py-20">
+    <section id="tech" className="py-12">
       <div className="max-w-4xl mx-auto">
         <h2 className="font-pixel text-lg md:text-xl text-primary mb-12 text-center">
           {"// TECH STACK"}

@@ -28,8 +28,8 @@ const AiChat = () => {
   return (
     <section id="chat" className="py-20">
       <div className="max-w-2xl mx-auto">
-        <h2 className="font-pixel text-lg md:text-xl text-primary mb-12 text-center">
-          {"// CHAT WITH AI ME"}
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-12 text-center">
+          <span className="text-primary">&lt;/&gt;</span> Chat With Me
         </h2>
         <div className="pixel-box bg-card p-4">
           <div className="h-64 overflow-y-auto space-y-3 mb-4 p-2">

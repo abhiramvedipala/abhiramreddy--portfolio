@@ -4,8 +4,8 @@ const About = () => {
   return (
     <section id="about" className="py-20">
       <div className="max-w-4xl mx-auto">
-        <h2 className="font-pixel text-lg md:text-xl text-primary mb-12 text-center">
-          {"// ABOUT ME"}
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-12 text-center">
+          <span className="text-primary">&lt;/&gt;</span> About Me
         </h2>
         <div className="flex flex-col md:flex-row gap-10 items-center">
           <div className="pixel-box bg-card p-2 shrink-0">

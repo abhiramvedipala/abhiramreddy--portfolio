@@ -21,7 +21,7 @@ const Contact = () => {
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center tracking-tight">
           Get in Touch
         </h2>
-        <form onSubmit={handleSubmit} className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-lg p-6 space-y-4">
+        <form onSubmit={handleSubmit} className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-6 space-y-4">
           <div>
             <label className="font-pixel text-[8px] text-white/80 block mb-2">NAME</label>
             <input

@@ -11,8 +11,8 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen py-20 flex flex-col items-center justify-center relative">
-      <div className="text-center max-w-3xl">
-        <h1 className="md:text-4xl lg:text-5xl text-white mb-6 leading-tight animate-float-slow font-pixel tracking-tight text-xl text-center whitespace-nowrap" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
+      <div className="text-center w-full px-4">
+        <h1 className="md:text-3xl lg:text-[2.75rem] text-white mb-6 leading-tight animate-float-slow font-pixel tracking-tight text-xl text-center whitespace-nowrap" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
           Abhiram Reddy Vedipala 
   
         </h1>

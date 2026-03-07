@@ -17,8 +17,8 @@ const Index = () => {
         className="fixed inset-0 bg-cover bg-center bg-no-repeat z-0"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      {/* Dark gradient overlay */}
-      <div className="fixed inset-0 z-0" style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(10,15,20,0.6) 40%, rgba(5,10,15,0.75) 100%)" }} />
+      {/* Dark gradient overlay - starts after hero */}
+      <div className="fixed inset-0 z-0 pointer-events-none" style={{ background: "linear-gradient(180deg, transparent 0%, transparent 50%, rgba(0,0,0,0.6) 75%, rgba(5,10,15,0.75) 100%)" }} />
 
       <div className="relative z-10">
         <Navigation />

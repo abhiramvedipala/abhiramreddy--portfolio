@@ -5,18 +5,29 @@ const Hero = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollToProjects = () => {
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="min-h-screen py-20 flex flex-col items-center justify-center relative">
       <div className="text-center max-w-3xl">
-        <h1 className="font-pixel md:text-4xl lg:text-5xl text-white pixel-text-shadow mb-6 leading-relaxed text-4xl animate-float-slow">
+        <h1 className="md:text-5xl lg:text-6xl text-white mb-6 leading-tight text-4xl animate-float-slow font-extrabold tracking-tight drop-shadow-lg" style={{ fontFamily: "'Inter', sans-serif" }}>
           Abhiram Vedipala
         </h1>
-        <p className="font-pixel md:text-xs mb-8 text-white/80 text-lg font-bold">
-          Data science and AI ENGINEER
+        <p className="md:text-lg mb-4 text-white/90 text-base font-semibold tracking-wide uppercase" style={{ fontFamily: "'Inter', sans-serif" }}>
+          Data Science and AI Engineer
         </p>
-        <p className="md:text-2xl mb-10 max-w-xl mx-auto leading-relaxed text-white/70 text-base font-bold text-center">
-          ​Driven by curiosity. Grounded by logic. Fueled by purpose.
+        <p className="md:text-xl mb-10 max-w-xl mx-auto leading-relaxed text-white/80 text-base font-medium text-center" style={{ fontFamily: "'Inter', sans-serif" }}>
+          Driven by curiosity. Grounded by logic. Fueled by purpose.
         </p>
+        <button
+          onClick={scrollToProjects}
+          className="mb-10 px-8 py-3 bg-white text-black font-bold border-2 border-black rounded-none hover:bg-gray-100 transition-colors text-sm tracking-wide"
+          style={{ fontFamily: "'Inter', sans-serif" }}
+        >
+          View My Work
+        </button>
         <div className="flex gap-5 justify-center">
           {[
             { icon: Github, href: "https://github.com/abhiramvedipala", label: "GitHub" },
@@ -29,7 +40,7 @@ const Hero = () => {
               href={href}
               aria-label={label}
               {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className="text-white/60 hover:text-white transition-colors"
+              className="text-white/70 hover:text-white transition-colors"
             >
               <Icon size={20} />
             </a>
@@ -40,7 +51,7 @@ const Hero = () => {
       <button
         onClick={scrollToAbout}
         aria-label="Scroll to About section"
-        className="absolute bottom-10 text-white/60 hover:text-white transition-colors animate-bounce-gentle"
+        className="absolute bottom-10 text-white/70 hover:text-white transition-colors animate-bounce-gentle"
       >
         <ChevronDown size={32} />
       </button>

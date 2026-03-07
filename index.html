@@ -31,36 +31,6 @@
   </head>
 
   <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-      <span id="loading-text">Abhiram Reddy</span>
-    </div>
-    <style>
-      #loading-screen {
-        position: fixed;
-        inset: 0;
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: hsl(220, 20%, 10%);
-        animation: loader-fade-out 0.5s ease-in 1s forwards;
-        pointer-events: none;
-      }
-      #loading-text {
-        font-family: 'Press Start 2P', cursive;
-        font-size: clamp(1.2rem, 4vw, 2.5rem);
-        color: hsl(142, 60%, 50%);
-        opacity: 0;
-        animation: loader-fade-in 0.5s ease-out 0.1s forwards;
-      }
-      @keyframes loader-fade-in {
-        to { opacity: 1; }
-      }
-      @keyframes loader-fade-out {
-        to { opacity: 0; visibility: hidden; }
-      }
-    </style>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

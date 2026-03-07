@@ -32,8 +32,8 @@ const Index = () => {
             <ScrollReveal delay={80}><Contact /></ScrollReveal>
           </main>
         </div>
-        <footer className="border-t border-white/10 py-8 text-center px-4">
-          <div className="flex justify-center gap-4 mb-4">
+        <footer className="bg-white py-10 text-center px-4">
+          <div className="flex justify-center gap-6 mb-4">
             {[
               { icon: Github, href: "https://github.com/abhiramvedipala", label: "GitHub" },
               { icon: Linkedin, href: "https://www.linkedin.com/in/abhiram-reddy-vedipala-0a4770309", label: "LinkedIn" },
@@ -45,13 +45,13 @@ const Index = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="text-white/60 hover:text-white transition-colors"
+                className="text-black/70 hover:text-black transition-colors"
               >
-                <Icon size={20} />
+                <Icon size={24} />
               </a>
             ))}
           </div>
-          <p className="font-pixel text-[8px] text-white/40">
+          <p className="text-black/60 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
             © 2026 AV. All rights reserved.
           </p>
         </footer>

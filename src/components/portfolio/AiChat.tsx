@@ -3,7 +3,7 @@ import { Send } from "lucide-react";
 
 const AiChat = () => {
   const [messages, setMessages] = useState<{ role: "user" | "assistant"; content: string }[]>([
-    { role: "assistant", content: "Hey! I'm the AI version of YOUR_NAME. Ask me anything about my work, skills, or experience!" },
+    { role: "assistant", content: "Hey! I'm the AI version of Abhiram. Ask me anything about my work, skills, or experience!" },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -15,7 +15,6 @@ const AiChat = () => {
     setInput("");
     setLoading(true);
 
-    // Placeholder response — will be replaced with Lovable Cloud AI
     setTimeout(() => {
       setMessages((prev) => [
         ...prev,
@@ -28,18 +27,18 @@ const AiChat = () => {
   return (
     <section id="chat" className="py-20">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-12 text-center">
-          <span className="text-primary">&lt;/&gt;</span> Chat With Me
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center">
+          <span className="text-primary">&lt;/&gt;</span> Chat With AI Assistant
         </h2>
-        <div className="pixel-box bg-card p-4">
+        <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-lg p-4">
           <div className="h-64 overflow-y-auto space-y-3 mb-4 p-2">
             {messages.map((m, i) => (
               <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                 <div
-                  className={`pixel-box-sm max-w-[80%] p-3 text-sm ${
+                  className={`max-w-[80%] p-3 text-sm rounded-lg ${
                     m.role === "user"
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-muted text-foreground"
+                      ? "bg-primary text-white"
+                      : "bg-white/10 text-white/90"
                   }`}
                 >
                   {m.content}
@@ -48,7 +47,7 @@ const AiChat = () => {
             ))}
             {loading && (
               <div className="flex justify-start">
-                <div className="pixel-box-sm bg-muted text-foreground p-3 text-sm">
+                <div className="bg-white/10 text-white/90 p-3 text-sm rounded-lg">
                   <span className="animate-blink">{">"}_</span>
                 </div>
               </div>
@@ -61,12 +60,12 @@ const AiChat = () => {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSend()}
               placeholder="Ask me anything..."
-              className="flex-1 bg-background text-foreground px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary pixel-box-sm"
+              className="flex-1 bg-white/10 text-white px-3 py-2 text-sm rounded-lg border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-white/40"
             />
             <button
               onClick={handleSend}
               disabled={loading}
-              className="pixel-btn bg-primary text-primary-foreground p-2"
+              className="bg-primary text-white p-2 rounded-lg hover:bg-primary/80 transition-colors"
             >
               <Send size={18} />
             </button>

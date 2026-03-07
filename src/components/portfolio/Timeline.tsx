@@ -28,16 +28,16 @@ const TimelineItem = ({ event, index, total }: { event: typeof events[0]; index:
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       <div className="flex flex-col items-center">
-        <div className="pixel-box-sm bg-primary text-primary-foreground font-pixel text-[8px] px-2 py-1 whitespace-nowrap relative z-10">
+        <div className="bg-primary text-white font-pixel text-[8px] px-3 py-1.5 rounded-full whitespace-nowrap relative z-10">
           {event.year}
         </div>
         {index < total - 1 && (
-          <div className="w-[3px] bg-primary/30 flex-1 min-h-[40px]" />
+          <div className="w-[2px] bg-white/20 flex-1 min-h-[40px]" />
         )}
       </div>
       <div className="pb-8">
-        <h3 className="font-pixel text-[10px] md:text-xs text-foreground mb-2">{event.title}</h3>
-        <p className="text-base md:text-lg text-muted-foreground">{event.desc}</p>
+        <h3 className="font-pixel text-[10px] md:text-xs text-white mb-2">{event.title}</h3>
+        <p className="text-base md:text-lg text-white/60">{event.desc}</p>
       </div>
     </div>
   );
@@ -46,8 +46,8 @@ const TimelineItem = ({ event, index, total }: { event: typeof events[0]; index:
 const Timeline = () => {
   return (
     <section id="timeline" className="py-20">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-12 text-center">
+      <div className="max-w-3xl mx-auto bg-black/40 backdrop-blur-sm rounded-lg p-8">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center">
           <span className="text-primary">&lt;/&gt;</span> Timeline
         </h2>
         <div className="space-y-0">

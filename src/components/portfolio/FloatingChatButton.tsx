@@ -31,7 +31,7 @@ const FloatingChatButton = () => {
         }}
         aria-label="Chat with AI"
       >
-        <span className="absolute inset-0 rounded-full animate-[glow-pulse_2.5s_ease-in-out_infinite] pointer-events-none" />
+        
         <MessageCircle size={24} />
       </button>
     </div>

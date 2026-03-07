@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Send } from "lucide-react";
+import { Send, CheckCircle } from "lucide-react";
 
 const glassStyle = {
   background: 'rgba(255, 255, 255, 0.08)',
@@ -10,35 +10,76 @@ const glassStyle = {
 };
 
 const Contact = () => {
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus("sending");
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    formData.append("access_key", "60545bb7-0995-43f6-8dae-307a204e96a2");
-    formData.append("subject", "New Contact from Portfolio - abhiramreddy.dev");
-    formData.append("from_name", "Abhiram Portfolio");
-    formData.append("replyto", formData.get("email") as string);
-    formData.append("botcheck", "");
+    setIsSubmitting(true);
+    setStatus("");
+
+    const target = e.target as HTMLFormElement;
+    const name = (target.elements.namedItem("name") as HTMLInputElement).value;
+    const email = (target.elements.namedItem("email") as HTMLInputElement).value;
+    const message = (target.elements.namedItem("message") as HTMLTextAreaElement).value;
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "60545bb7-0995-43f6-8dae-307a204e96a2",
+          name: name,
+          email: email,
+          message: message,
+          subject: "New Contact from abhiramreddy.dev",
+          from_name: "Abhiram Portfolio",
+          replyto: email,
+        }),
       });
+
       const data = await response.json();
+
       if (data.success) {
         setStatus("success");
-        form.reset();
+        target.reset();
       } else {
         setStatus("error");
       }
-    } catch {
+    } catch (err) {
       setStatus("error");
+    } finally {
+      setIsSubmitting(false);
     }
   };
+
+  if (status === "success") {
+    return (
+      <section id="contact" className="py-20">
+        <div className="max-w-xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center tracking-tight animate-float-slow">
+            Get in Touch
+          </h2>
+          <div className="p-8 flex flex-col items-center text-center gap-4" style={glassStyle}>
+            <CheckCircle className="text-primary" size={56} />
+            <h3 className="text-white font-bold text-xl">Message Delivered to the Kingdom! ⚔️</h3>
+            <p className="text-white/70 text-sm">
+              Your scroll has reached Abhiram's quarters. He'll dispatch a reply raven shortly. In the meantime, feel free to explore the realm.
+            </p>
+            <button
+              onClick={() => setStatus("")}
+              className="bg-primary text-white font-pixel text-[10px] px-6 py-3 rounded-lg hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all duration-200 mt-2"
+            >
+              Send Another Message
+            </button>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="contact" className="py-20">
@@ -47,7 +88,6 @@ const Contact = () => {
           Get in Touch
         </h2>
         <form onSubmit={handleSubmit} className="p-6 space-y-4" style={glassStyle}>
-          <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
           <div>
             <label className="font-pixel text-[8px] block mb-2" style={{ color: '#f1f5f9' }}>NAME</label>
             <input
@@ -80,20 +120,15 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            disabled={status === "sending"}
+            disabled={isSubmitting}
             className="bg-primary text-white font-pixel text-[10px] px-6 py-3 w-full flex items-center justify-center gap-2 rounded-lg hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all duration-200"
           >
             <Send size={14} />
-            {status === "sending" ? "SENDING..." : "SEND MESSAGE"}
+            {isSubmitting ? "SENDING..." : "SEND MESSAGE"}
           </button>
-          {status === "success" && (
-            <p className="font-pixel text-[8px] text-primary text-center">
-              {">"} Thank you for reaching out! I'll get back to you shortly.
-            </p>
-          )}
           {status === "error" && (
             <p className="font-pixel text-[8px] text-destructive text-center">
-              {">"} Something went wrong. Please try again.
+              {">"} The raven got lost! Please try again or email directly at abhiramreddy.vedipala@gmail.com
             </p>
           )}
         </form>

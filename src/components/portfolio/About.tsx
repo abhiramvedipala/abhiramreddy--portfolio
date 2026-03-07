@@ -3,7 +3,7 @@ import pixelAvatar from "@/assets/pixel-avatar.png";
 const About = () => {
   return (
     <section id="about" className="py-20">
-      <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center">
+      <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center animate-float-slow">
         About Me
       </h2>
       <div

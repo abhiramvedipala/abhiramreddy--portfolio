@@ -24,14 +24,6 @@ const projects = [
   },
 ];
 
-const glassStyle = {
-  background: 'rgba(255, 255, 255, 0.08)',
-  backdropFilter: 'blur(12px)',
-  WebkitBackdropFilter: 'blur(12px)',
-  border: '1px solid rgba(255, 255, 255, 0.15)',
-  borderRadius: '16px',
-};
-
 const Projects = () => {
   return (
     <section id="projects" className="py-20">
@@ -43,15 +35,9 @@ const Projects = () => {
           {projects.map((p) => (
             <div
               key={p.title}
-              className="p-5 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.1)] group"
-              style={{
-                ...glassStyle,
-                borderColor: undefined,
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'; }}
+              className="bg-black/70 rounded-2xl p-5 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:bg-black/80 group border border-white/10"
             >
-              <h3 className="font-pixel text-xs mb-3 group-hover:text-primary transition-colors" style={{ color: '#f1f5f9' }}>
+              <h3 className="font-pixel text-xs text-white mb-3 group-hover:text-primary transition-colors">
                 {p.title}
               </h3>
               <p className="text-base text-white/70 mb-4 flex-1">{p.desc}</p>
@@ -59,8 +45,7 @@ const Projects = () => {
                 {p.tags.map((t) => (
                   <span
                     key={t}
-                    className="font-pixel text-[7px] px-2 py-1 rounded-full"
-                    style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: '#f1f5f9' }}
+                    className="font-pixel text-[7px] px-2 py-1 rounded-full bg-white/10 text-white/90 border border-white/20"
                   >
                     {t}
                   </span>
@@ -69,8 +54,7 @@ const Projects = () => {
               <div className="flex gap-3">
                 <a
                   href={p.github}
-                  className="rounded-lg px-3 py-2 inline-flex items-center gap-1 transition-colors hover:bg-white/20"
-                  style={{ background: 'rgba(255,255,255,0.1)', color: '#f1f5f9' }}
+                  className="bg-white/10 text-white rounded-lg px-3 py-2 inline-flex items-center gap-1 transition-colors hover:bg-white/20"
                 >
                   <Github size={14} />
                   <span className="font-pixel text-[7px]">CODE</span>

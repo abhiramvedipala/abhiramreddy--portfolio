@@ -21,17 +21,13 @@ const Index = () => {
       <div className="relative z-10">
         <Navigation />
         <Hero />
-        <div className="relative">
-          {/* Dark overlay only for content sections below hero */}
-          <div className="absolute inset-0 bg-black/70 z-0" />
-          <main className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal><About /></ScrollReveal>
             <ScrollReveal delay={80}><Technologies /></ScrollReveal>
             <ScrollReveal delay={80}><Projects /></ScrollReveal>
             <ScrollReveal delay={80}><AiChat /></ScrollReveal>
             <ScrollReveal delay={80}><Contact /></ScrollReveal>
-          </main>
-        </div>
+        </main>
         <footer className="bg-white py-10 text-center px-4">
           <div className="flex justify-center gap-6 mb-4">
             {[

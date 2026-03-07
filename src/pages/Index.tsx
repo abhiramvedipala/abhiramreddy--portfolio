@@ -17,19 +17,21 @@ const Index = () => {
         className="fixed inset-0 bg-cover bg-center bg-no-repeat z-0"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      {/* Dark gradient overlay - starts after hero */}
-      <div className="fixed inset-0 z-0 pointer-events-none" style={{ background: "linear-gradient(180deg, transparent 0%, transparent 50%, rgba(0,0,0,0.6) 75%, rgba(5,10,15,0.75) 100%)" }} />
 
       <div className="relative z-10">
         <Navigation />
-        <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Hero />
-          <ScrollReveal><About /></ScrollReveal>
-          <ScrollReveal delay={80}><Technologies /></ScrollReveal>
-          <ScrollReveal delay={80}><Projects /></ScrollReveal>
-          <ScrollReveal delay={80}><AiChat /></ScrollReveal>
-          <ScrollReveal delay={80}><Contact /></ScrollReveal>
-        </main>
+        <Hero />
+        <div className="relative">
+          {/* Dark overlay only for content sections below hero */}
+          <div className="absolute inset-0 bg-black/70 z-0" />
+          <main className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal><About /></ScrollReveal>
+            <ScrollReveal delay={80}><Technologies /></ScrollReveal>
+            <ScrollReveal delay={80}><Projects /></ScrollReveal>
+            <ScrollReveal delay={80}><AiChat /></ScrollReveal>
+            <ScrollReveal delay={80}><Contact /></ScrollReveal>
+          </main>
+        </div>
         <footer className="border-t border-white/10 py-8 text-center px-4">
           <div className="flex justify-center gap-4 mb-4">
             {[

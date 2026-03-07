@@ -19,7 +19,7 @@ const Contact = () => {
     <section id="contact" className="py-20">
       <div className="max-w-xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center">
-          <span className="text-primary">&lt;/&gt;</span> Get in Touch
+          Get in Touch
         </h2>
         <form onSubmit={handleSubmit} className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-lg p-6 space-y-4">
           <div>

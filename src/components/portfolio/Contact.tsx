@@ -15,7 +15,8 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("sending");
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     formData.append("access_key", "60545bb7-0995-43f6-8dae-307a204e96a2");
     formData.append("subject", "New Contact from Portfolio - abhiramreddy.dev");
     formData.append("from_name", "Abhiram Portfolio");
@@ -30,7 +31,7 @@ const Contact = () => {
       const data = await response.json();
       if (data.success) {
         setStatus("success");
-        e.currentTarget.reset();
+        form.reset();
       } else {
         setStatus("error");
       }

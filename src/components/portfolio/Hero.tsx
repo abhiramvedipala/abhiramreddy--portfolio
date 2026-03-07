@@ -12,13 +12,13 @@ const Hero = () => {
   return (
     <section className="min-h-screen py-20 flex flex-col items-center justify-center relative">
       <div className="text-center max-w-3xl">
-        <h1 className="md:text-5xl lg:text-6xl text-white mb-6 leading-tight animate-float-slow font-extrabold tracking-tight text-5xl" style={{ fontFamily: "'Inter', sans-serif", textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
+        <h1 className="md:text-5xl lg:text-6xl text-white mb-6 leading-tight animate-float-slow font-pixel tracking-tight text-3xl" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
           Abhiram Vedipala
         </h1>
-        <p className="md:text-lg mb-4 text-white/90 font-semibold tracking-wide uppercase text-3xl" style={{ fontFamily: "'Inter', sans-serif", textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
+        <p className="md:text-lg mb-4 text-white/90 font-pixel tracking-wide uppercase text-sm" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
           Data Science and AI Engineer
         </p>
-        <p className="md:text-xl mb-10 max-w-xl mx-auto leading-relaxed text-white/80 text-base font-medium text-center" style={{ fontFamily: "'Inter', sans-serif", textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
+        <p className="md:text-xl mb-10 max-w-xl mx-auto leading-relaxed text-white/80 font-pixel-body text-xl text-center" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
           Driven by curiosity. Grounded by logic. Fueled by purpose.
         </p>
         <button

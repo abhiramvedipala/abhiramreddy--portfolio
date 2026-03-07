@@ -35,7 +35,7 @@ const Projects = () => {
           {projects.map((p) => (
             <div
               key={p.title}
-              className="bg-black/70 rounded-2xl p-5 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:bg-black/80 group border border-white/10"
+              className="bg-black/70 rounded-2xl p-5 flex flex-col transition-all duration-500 hover:-translate-y-3 hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] hover:bg-black/90 group border border-white/10 hover:border-primary/50"
             >
               <h3 className="font-pixel text-xs text-white mb-3 group-hover:text-primary transition-colors">
                 {p.title}

@@ -17,7 +17,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={() => setDark(!dark)}
-      className="pixel-btn bg-card text-foreground p-2 fixed top-4 right-4 z-50"
+      className="pixel-btn bg-card text-foreground p-2 z-50"
       aria-label="Toggle theme"
     >
       {dark ? <Sun size={20} /> : <Moon size={20} />}

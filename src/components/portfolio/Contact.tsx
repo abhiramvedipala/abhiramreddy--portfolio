@@ -18,44 +18,44 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20">
       <div className="max-w-xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-12 text-center animate-float-slow">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center">
           <span className="text-primary">&lt;/&gt;</span> Get in Touch
         </h2>
-        <form onSubmit={handleSubmit} className="pixel-box bg-card p-6 space-y-4">
+        <form onSubmit={handleSubmit} className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-lg p-6 space-y-4">
           <div>
-            <label className="font-pixel text-[8px] text-foreground block mb-2">NAME</label>
+            <label className="font-pixel text-[8px] text-white/80 block mb-2">NAME</label>
             <input
               type="text"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full bg-background text-foreground px-3 py-2 text-sm pixel-box-sm focus:outline-none focus:ring-2 focus:ring-primary transition-shadow"
+              className="w-full bg-white/10 text-white px-3 py-2 text-sm rounded-lg border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-white/40"
               required
             />
           </div>
           <div>
-            <label className="font-pixel text-[8px] text-foreground block mb-2">EMAIL</label>
+            <label className="font-pixel text-[8px] text-white/80 block mb-2">EMAIL</label>
             <input
               type="email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full bg-background text-foreground px-3 py-2 text-sm pixel-box-sm focus:outline-none focus:ring-2 focus:ring-primary transition-shadow"
+              className="w-full bg-white/10 text-white px-3 py-2 text-sm rounded-lg border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-white/40"
               required
             />
           </div>
           <div>
-            <label className="font-pixel text-[8px] text-foreground block mb-2">MESSAGE</label>
+            <label className="font-pixel text-[8px] text-white/80 block mb-2">MESSAGE</label>
             <textarea
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               rows={4}
-              className="w-full bg-background text-foreground px-3 py-2 text-sm pixel-box-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none transition-shadow"
+              className="w-full bg-white/10 text-white px-3 py-2 text-sm rounded-lg border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary resize-none placeholder:text-white/40"
               required
             />
           </div>
           <button
             type="submit"
             disabled={status === "sending"}
-            className="pixel-btn bg-primary text-primary-foreground font-pixel text-[10px] px-6 py-3 w-full flex items-center justify-center gap-2 hover:scale-[1.03] hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)] transition-all duration-200"
+            className="bg-primary text-white font-pixel text-[10px] px-6 py-3 w-full flex items-center justify-center gap-2 rounded-lg hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all duration-200"
           >
             <Send size={14} />
             {status === "sending" ? "SENDING..." : status === "sent" ? "SENT!" : "SEND MESSAGE"}

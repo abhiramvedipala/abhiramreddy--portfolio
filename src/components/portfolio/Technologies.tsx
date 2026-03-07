@@ -13,11 +13,14 @@ const Technologies = () => {
           <span className="text-primary">&lt;/&gt;</span> Technologies
         </h2>
         <div className="flex flex-wrap gap-3 justify-center">
-          {techs.map((tech) => (
+          {techs.map((tech, i) => (
             <span
               key={tech}
-              className="pixel-btn bg-card text-foreground font-pixel text-[8px] md:text-[10px] px-4 py-2 cursor-default"
-              style={{ borderRadius: "9999px" }}
+              className="pixel-btn bg-card text-foreground font-pixel text-[8px] md:text-[10px] px-4 py-2 cursor-default animate-float-pill hover:scale-110 transition-transform"
+              style={{
+                borderRadius: "9999px",
+                animationDelay: `${i * 0.15}s`,
+              }}
             >
               {tech}
             </span>

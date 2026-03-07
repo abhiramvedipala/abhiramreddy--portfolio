@@ -65,9 +65,9 @@ const Contact = () => {
           </h2>
           <div className="p-8 flex flex-col items-center text-center gap-4" style={glassStyle}>
             <CheckCircle className="text-primary" size={56} />
-            <h3 className="text-white font-bold text-xl">Message Delivered to the Kingdom! ⚔️</h3>
+            <h3 className="text-white font-pixel text-sm md:text-base">Message Sent! ✓</h3>
             <p className="text-white/70 text-sm">
-              Your scroll has reached Abhiram's quarters. He'll dispatch a reply raven shortly. In the meantime, feel free to explore the realm.
+              Got it — I'll be in touch soon. While you wait, feel free to look around.
             </p>
             <button
               onClick={() => setStatus("")}
@@ -93,8 +93,9 @@ const Contact = () => {
             <input
               type="text"
               name="name"
-              className="w-full text-white px-3 py-2 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-white/40"
-              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}
+              className="w-full text-white font-pixel-body px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)', fontSize: '1rem', fontWeight: 500, letterSpacing: '0.03em', color: 'white' }}
+              placeholder=""
               required
             />
           </div>
@@ -103,8 +104,9 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              className="w-full text-white px-3 py-2 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-white/40"
-              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}
+              className="w-full text-white font-pixel-body px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)', fontSize: '1rem', fontWeight: 500, letterSpacing: '0.03em', color: 'white' }}
+              placeholder=""
               required
             />
           </div>
@@ -113,8 +115,9 @@ const Contact = () => {
             <textarea
               name="message"
               rows={4}
-              className="w-full text-white px-3 py-2 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none placeholder:text-white/40"
-              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}
+              className="w-full text-white font-pixel-body px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)', fontSize: '1rem', fontWeight: 500, letterSpacing: '0.03em', color: 'white' }}
+              placeholder=""
               required
             />
           </div>

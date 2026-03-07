@@ -1,4 +1,4 @@
-import ThemeToggle from "@/components/ThemeToggle";
+
 
 const links = [
   { label: "About", href: "#about" },
@@ -26,7 +26,7 @@ const Navigation = () => {
               {l.label}
             </a>
           ))}
-          <ThemeToggle />
+          
         </div>
       </div>
     </nav>

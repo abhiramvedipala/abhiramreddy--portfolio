@@ -27,7 +27,7 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
         <a href="#" className="flex-shrink-0">
           <span className="px-2 py-1 border-2 border-white/60 font-bold text-lg text-white hover:border-primary hover:text-primary transition-colors tracking-tight">
-            &lt; AV /&gt;
+            AV
           </span>
         </a>
 

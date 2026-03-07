@@ -16,8 +16,8 @@ const Index = () => {
         className="fixed inset-0 bg-cover bg-center bg-no-repeat z-0"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      {/* Dark overlay */}
-      <div className="fixed inset-0 z-0" style={{ backgroundColor: "rgba(0,0,0,0.55)" }} />
+      {/* Dark gradient overlay */}
+      <div className="fixed inset-0 z-0" style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(10,15,20,0.6) 40%, rgba(5,10,15,0.75) 100%)" }} />
 
       <div className="relative z-10">
         <Navigation />
@@ -49,7 +49,7 @@ const Index = () => {
             ))}
           </div>
           <p className="font-pixel text-[8px] text-white/40">
-            © 2026 ABHIRAM VEDIPALA • BUILT WITH PIXELS & LOVE
+            © 2026 AV. All rights reserved.
           </p>
         </footer>
       </div>

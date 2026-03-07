@@ -16,7 +16,7 @@ const Hero = () => {
           Abhiram Reddy Vedipala 
   
         </h1>
-        <p className="md:text-lg mb-4 text-white/90 font-pixel tracking-wide uppercase sm:text-lg whitespace-nowrap text-xl" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
+        <p className="text-[2.2vw] sm:text-base md:text-lg mb-4 text-white/90 font-pixel tracking-wide uppercase whitespace-nowrap" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
           Data Science and AI Engineer
         </p>
         <p className="md:text-xl mb-10 max-w-xl mx-auto leading-relaxed text-white/80 font-pixel-body text-center text-lg" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>

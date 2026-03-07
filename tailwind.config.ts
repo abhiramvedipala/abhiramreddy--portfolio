@@ -86,7 +86,7 @@ export default {
         },
         "float-slow": {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-5px)" },
+          "50%": { transform: "translateY(-12px)" },
         },
         "bounce-gentle": {
           "0%, 100%": { transform: "translateY(0)" },
@@ -106,7 +106,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         blink: "blink 1s step-end infinite",
         float: "float 4s ease-in-out infinite",
-        "float-slow": "float-slow 5s ease-in-out infinite",
+        "float-slow": "float-slow 3s ease-in-out infinite",
         "float-delayed": "float-slow 5s ease-in-out 0.3s infinite",
         "float-delayed-2": "float-slow 5s ease-in-out 0.6s infinite",
         "bounce-gentle": "bounce-gentle 2.5s ease-in-out infinite",

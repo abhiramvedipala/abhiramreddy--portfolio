@@ -1,48 +1,43 @@
-# 🧙‍♂️ Abhiram Vedipala — Portfolio
+# Abhiram Vedipala — Portfolio
 
-> *Data Science & AI Engineer | FIU Sophomore | Building things that matter*
-
-[![Live Site](https://img.shields.io/badge/🌐_Live_Site-abhiramreddy.com-blue?style=for-the-badge)](https://abhiramreddy.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/abhiramvedipala)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/abhiramvedipala)
+**Data Science and AI Engineer | FIU Sophomore**
 
 ---
 
-## ✨ About This Project
+## About
 
-A fantasy/RPG-themed personal portfolio website built to showcase my journey as a Data Science and AI Engineering student at Florida International University. The site features a medieval pixel-art aesthetic, glassmorphism UI, an AI-powered chat section, and smooth scroll interactions.
-
----
-
-## 🚀 Features
-
-- 🎨 **Fantasy RPG Theme** — immersive pixel-art background with glassmorphism cards
-- 🤖 **AI Chat Integration** — built-in AI assistant powered by Claude
-- 🌙 **Glassmorphism UI** — frosted glass cards throughout all sections
-- 📱 **Fully Responsive** — works on mobile, tablet, and desktop
-- ⚡ **Fast Performance** — built with Vite + React for blazing speed
-- 📬 **Working Contact Form** — powered by Formspree, delivers straight to email
-- 🔒 **HTTPS Secured** — SSL certificate via Netlify
+A fantasy/RPG-themed personal portfolio website built to showcase my journey as a Data Science and AI Engineering student at Florida International University. The site features a medieval pixel-art aesthetic, glassmorphism UI, an AI-powered chat assistant, and smooth scroll interactions.
 
 ---
 
-## 🛠️ Tech Stack
+## Features
 
-| Category | Technologies |
-|----------|-------------|
-| Frontend | React, TypeScript, Tailwind CSS |
-| Build Tool | Vite |
-| Deployment | Netlify |
-| AI | Claude API (Anthropic) |
-| Contact Form | Formspree |
-| Version Control | Git + GitHub |
+- Fantasy RPG theme with immersive pixel-art background and glassmorphism cards
+- AI chat assistant powered by the Claude API (Anthropic)
+- Fully responsive across mobile, tablet, and desktop
+- Fast performance via Vite and React
+- Working contact form powered by Formspree
+- HTTPS secured via Netlify's SSL certificate
 
 ---
 
-## 📁 Project Structure
+## Tech Stack
+
+| Category        | Technologies                    |
+|-----------------|---------------------------------|
+| Frontend        | React, TypeScript, Tailwind CSS |
+| Build Tool      | Vite                            |
+| Deployment      | Netlify                         |
+| AI              | Claude API (Anthropic)          |
+| Contact Form    | Formspree                       |
+| Version Control | Git + GitHub                    |
+
+---
+
+## Project Structure
 
 ```
-friendly-folio-bot/
+abhiramreddy-portfolio/
 ├── public/          # Static assets (images, icons)
 ├── src/
 │   ├── components/  # React components (Navbar, Hero, About, etc.)
@@ -55,14 +50,14 @@ friendly-folio-bot/
 
 ---
 
-## 🧑‍💻 Running Locally
+## Running Locally
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/abhiramvedipala/friendly-folio-bot.git
+git clone https://github.com/abhiramvedipala/abhiramreddy--portfolio.git
 
 # 2. Navigate into the project
-cd friendly-folio-bot
+cd abhiramreddy--portfolio
 
 # 3. Install dependencies
 npm install
@@ -70,34 +65,32 @@ npm install
 # 4. Start the development server
 npm run dev
 
-# 5. Open in browser
-# Visit http://localhost:5173
+# 5. Open in browser at http://localhost:5173
 ```
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
-This project is deployed on **Netlify** with a custom domain.
+This project is deployed on Netlify with a custom domain at [abhiramreddy.dev](https://abhiramreddy.dev).
 
 Every push to the `main` branch automatically triggers a new deployment.
 
 ---
 
-## 📬 Contact
+## Contact
 
-Have a question or want to work together?
-
-- 📧 Email: [your-email@example.com](mailto:your-email@example.com)
-- 💼 LinkedIn: [linkedin.com/in/abhiramvedipala](https://linkedin.com/in/abhiramvedipala)
-- 🌐 Portfolio: [abhiramreddy.com](https://abhiramreddy.com)
+- Email: [abhiramreddy.vedipala@gmail.com](mailto:abhiramreddy.vedipala@gmail.com)
+- LinkedIn: [linkedin.com/in/abhiram-reddy-vedipala-0a4770309](https://www.linkedin.com/in/abhiram-reddy-vedipala-0a4770309)
+- GitHub: [github.com/abhiramvedipala](https://github.com/abhiramvedipala)
+- Portfolio: [abhiramreddy.dev](https://abhiramreddy.dev)
 
 ---
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-<p align="center">Built with ❤️ by Abhiram Vedipala</p>
+Built by Abhiram Vedipala.

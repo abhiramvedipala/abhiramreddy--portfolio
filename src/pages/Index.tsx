@@ -16,7 +16,7 @@ const Index = () => {
       {/* Fixed pixel art background */}
       <div
         className="fixed inset-0 bg-cover bg-center bg-no-repeat z-0"
-        style={{ backgroundImage: `url(${heroBg})`, filter: 'brightness(0.75) saturate(0.9)' }}
+        style={{ backgroundImage: `url(${heroBg})`, filter: 'brightness(0.55) saturate(0.7)' }}
       />
 
       <div className="relative z-10">

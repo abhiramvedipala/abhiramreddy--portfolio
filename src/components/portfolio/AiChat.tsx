@@ -2,9 +2,7 @@ import { useState } from "react";
 import { Send } from "lucide-react";
 
 const AiChat = () => {
-  const [messages, setMessages] = useState<{role: "user" | "assistant"; content: string;}[]>([
-    { role: "assistant", content: "Hey! I'm the AI version of Abhiram. Ask me anything about my work, skills, or experience!" }
-  ]);
+  const [messages, setMessages] = useState<{role: "user" | "assistant"; content: string;}[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -27,29 +25,35 @@ const AiChat = () => {
   return (
     <section id="chat" className="py-20">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
-          Chat With AI Assistant
-        </h2>
-        <div className="rounded-2xl overflow-hidden" style={{ background: 'linear-gradient(180deg, rgba(30,40,55,0.92) 0%, rgba(20,25,35,0.95) 100%)' }}>
-          <div className="h-80 overflow-y-auto space-y-3 p-6">
-            {messages.map((m, i) => (
-              <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
-                <div
-                  className={`max-w-[80%] p-4 text-sm rounded-xl ${
-                    m.role === "user"
-                      ? "bg-sky-500 text-white"
-                      : "bg-white/10 text-white/90"
-                  }`}
-                >
-                  {m.content}
-                </div>
+        <div className="rounded-2xl overflow-hidden" style={{ background: 'rgba(30,40,55,0.85)' }}>
+          <div className="h-80 flex flex-col items-center justify-end p-6 space-y-2">
+            {messages.length === 0 ? (
+              <div className="flex-1 flex flex-col items-center justify-end pb-4 space-y-2">
+                <p className="text-white/50 text-lg font-medium">Start a conversation...</p>
+                <p className="text-sky-400/80 text-base">Ask me anything about AI!</p>
               </div>
-            ))}
-            {loading && (
-              <div className="flex justify-start">
-                <div className="bg-white/10 text-white/90 p-4 text-sm rounded-xl">
-                  <span className="animate-pulse">Typing...</span>
-                </div>
+            ) : (
+              <div className="flex-1 w-full overflow-y-auto space-y-3">
+                {messages.map((m, i) => (
+                  <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
+                    <div
+                      className={`max-w-[80%] p-4 text-sm rounded-xl ${
+                        m.role === "user"
+                          ? "bg-sky-500 text-white"
+                          : "bg-white/10 text-white/90"
+                      }`}
+                    >
+                      {m.content}
+                    </div>
+                  </div>
+                ))}
+                {loading && (
+                  <div className="flex justify-start">
+                    <div className="bg-white/10 text-white/90 p-4 text-sm rounded-xl">
+                      <span className="animate-pulse">Typing...</span>
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </div>

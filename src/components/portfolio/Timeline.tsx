@@ -47,7 +47,7 @@ const Timeline = () => {
   return (
     <section id="timeline" className="py-20">
       <div className="max-w-3xl mx-auto bg-black/40 backdrop-blur-sm rounded-lg p-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center animate-float-slow">
           <span className="text-primary">&lt;/&gt;</span> Timeline
         </h2>
         <div className="space-y-0">

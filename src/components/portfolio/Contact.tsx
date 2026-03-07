@@ -9,8 +9,6 @@ const Contact = () => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) return;
     setStatus("sending");
-
-    // Placeholder — will be connected to Resend via Lovable Cloud
     setTimeout(() => {
       setStatus("sent");
       setForm({ name: "", email: "", message: "" });
@@ -20,8 +18,8 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20">
       <div className="max-w-xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-12 text-center">
-          <span className="text-primary">&lt;/&gt;</span> Contact
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-12 text-center animate-float-slow">
+          <span className="text-primary">&lt;/&gt;</span> Get in Touch
         </h2>
         <form onSubmit={handleSubmit} className="pixel-box bg-card p-6 space-y-4">
           <div>
@@ -30,7 +28,7 @@ const Contact = () => {
               type="text"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full bg-background text-foreground px-3 py-2 text-sm pixel-box-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full bg-background text-foreground px-3 py-2 text-sm pixel-box-sm focus:outline-none focus:ring-2 focus:ring-primary transition-shadow"
               required
             />
           </div>
@@ -40,7 +38,7 @@ const Contact = () => {
               type="email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full bg-background text-foreground px-3 py-2 text-sm pixel-box-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full bg-background text-foreground px-3 py-2 text-sm pixel-box-sm focus:outline-none focus:ring-2 focus:ring-primary transition-shadow"
               required
             />
           </div>
@@ -50,14 +48,14 @@ const Contact = () => {
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               rows={4}
-              className="w-full bg-background text-foreground px-3 py-2 text-sm pixel-box-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+              className="w-full bg-background text-foreground px-3 py-2 text-sm pixel-box-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none transition-shadow"
               required
             />
           </div>
           <button
             type="submit"
             disabled={status === "sending"}
-            className="pixel-btn bg-primary text-primary-foreground font-pixel text-[10px] px-6 py-3 w-full flex items-center justify-center gap-2"
+            className="pixel-btn bg-primary text-primary-foreground font-pixel text-[10px] px-6 py-3 w-full flex items-center justify-center gap-2 hover:scale-[1.03] hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)] transition-all duration-200"
           >
             <Send size={14} />
             {status === "sending" ? "SENDING..." : status === "sent" ? "SENT!" : "SEND MESSAGE"}

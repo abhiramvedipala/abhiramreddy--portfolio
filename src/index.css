@@ -121,3 +121,12 @@
     text-shadow: 2px 2px 0px hsl(var(--foreground) / 0.3);
   }
 }
+
+input.font-pixel-body::placeholder,
+textarea.font-pixel-body::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'VT323', monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}

@@ -16,7 +16,7 @@ const AiChat = () => {
     setTimeout(() => {
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "Thanks for your message! The AI backend isn't connected yet — enable Lovable Cloud to power this chat." }
+        { role: "assistant", content: "Thanks for your message! The AI backend isn't connected yet." }
       ]);
       setLoading(false);
     }, 1000);

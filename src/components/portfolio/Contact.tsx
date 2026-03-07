@@ -65,9 +65,9 @@ const Contact = () => {
           </h2>
           <div className="p-8 flex flex-col items-center text-center gap-4" style={glassStyle}>
             <CheckCircle className="text-primary" size={56} />
-            <h3 className="text-white font-pixel text-sm md:text-base">Message Sent! ✓</h3>
-            <p className="text-white/70 text-sm">
-              Got it — I'll be in touch soon. While you wait, feel free to look around.
+            <h3 className="text-white font-pixel text-sm md:text-base">Message Sent!</h3>
+            <p className="text-white/70 text-sm font-pixel">
+              Your message found its way here. I'll respond soon.
             </p>
             <button
               onClick={() => setStatus("")}

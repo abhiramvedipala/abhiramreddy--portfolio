@@ -3,6 +3,9 @@ import pixelAvatar from "@/assets/pixel-avatar.png";
 const About = () => {
   return (
     <section id="about" className="py-20">
+      <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center">
+        About Me
+      </h2>
       <div
         className="max-w-4xl mx-auto rounded-2xl p-8"
         style={{
@@ -12,9 +15,6 @@ const About = () => {
           border: '1px solid rgba(255, 255, 255, 0.15)',
         }}
       >
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center">
-          About Me
-        </h2>
         <div className="flex flex-col md:flex-row gap-10 items-center">
           <div className="rounded-2xl p-1 shrink-0" style={{ border: '2px solid rgba(255, 255, 255, 0.3)', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
             <img

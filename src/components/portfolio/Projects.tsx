@@ -24,6 +24,14 @@ const projects = [
   },
 ];
 
+const glassStyle = {
+  background: 'rgba(255, 255, 255, 0.08)',
+  backdropFilter: 'blur(12px)',
+  WebkitBackdropFilter: 'blur(12px)',
+  border: '1px solid rgba(255, 255, 255, 0.15)',
+  borderRadius: '16px',
+};
+
 const Projects = () => {
   return (
     <section id="projects" className="py-20">
@@ -35,25 +43,39 @@ const Projects = () => {
           {projects.map((p) => (
             <div
               key={p.title}
-              className="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg p-5 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.1)] hover:border-white/30 group"
+              className="p-5 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,255,255,0.1)] group"
+              style={{
+                ...glassStyle,
+                borderColor: undefined,
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'; }}
             >
-              <h3 className="font-pixel text-xs text-white mb-3 group-hover:text-primary transition-colors">
+              <h3 className="font-pixel text-xs mb-3 group-hover:text-primary transition-colors" style={{ color: '#f1f5f9' }}>
                 {p.title}
               </h3>
               <p className="text-base text-white/70 mb-4 flex-1">{p.desc}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {p.tags.map((t) => (
-                  <span key={t} className="font-pixel text-[7px] text-primary bg-white/10 px-2 py-1 rounded-full">
+                  <span
+                    key={t}
+                    className="font-pixel text-[7px] px-2 py-1 rounded-full"
+                    style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: '#f1f5f9' }}
+                  >
                     {t}
                   </span>
                 ))}
               </div>
               <div className="flex gap-3">
-                <a href={p.github} className="bg-white/10 text-white/80 hover:bg-white/20 rounded px-3 py-2 inline-flex items-center gap-1 transition-colors">
+                <a
+                  href={p.github}
+                  className="rounded-lg px-3 py-2 inline-flex items-center gap-1 transition-colors hover:bg-white/20"
+                  style={{ background: 'rgba(255,255,255,0.1)', color: '#f1f5f9' }}
+                >
                   <Github size={14} />
                   <span className="font-pixel text-[7px]">CODE</span>
                 </a>
-                <a href={p.live} className="bg-primary/80 text-white hover:bg-primary rounded px-3 py-2 inline-flex items-center gap-1 transition-colors">
+                <a href={p.live} className="bg-primary/80 text-white hover:bg-primary rounded-lg px-3 py-2 inline-flex items-center gap-1 transition-colors">
                   <ExternalLink size={14} />
                   <span className="font-pixel text-[7px]">LIVE</span>
                 </a>

@@ -25,7 +25,15 @@ const AiChat = () => {
   return (
     <section id="chat" className="py-20">
       <div className="max-w-2xl mx-auto">
-        <div className="rounded-2xl overflow-hidden" style={{ background: 'rgba(30,40,55,0.85)' }}>
+        <div
+          className="rounded-2xl overflow-hidden"
+          style={{
+            background: 'rgba(255, 255, 255, 0.08)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+            border: '1px solid rgba(255, 255, 255, 0.15)',
+          }}
+        >
           <div className="h-80 flex flex-col items-center justify-end p-6 space-y-2">
             {messages.length === 0 ? (
               <div className="flex-1 flex flex-col items-center justify-end pb-4 space-y-2">
@@ -40,8 +48,9 @@ const AiChat = () => {
                       className={`max-w-[80%] p-4 text-sm rounded-xl ${
                         m.role === "user"
                           ? "bg-sky-500 text-white"
-                          : "bg-white/10 text-white/90"
+                          : "text-white/90"
                       }`}
+                      style={m.role === "assistant" ? { background: 'rgba(255,255,255,0.1)' } : undefined}
                     >
                       {m.content}
                     </div>
@@ -49,7 +58,7 @@ const AiChat = () => {
                 ))}
                 {loading && (
                   <div className="flex justify-start">
-                    <div className="bg-white/10 text-white/90 p-4 text-sm rounded-xl">
+                    <div className="text-white/90 p-4 text-sm rounded-xl" style={{ background: 'rgba(255,255,255,0.1)' }}>
                       <span className="animate-pulse">Typing...</span>
                     </div>
                   </div>
@@ -57,7 +66,7 @@ const AiChat = () => {
               </div>
             )}
           </div>
-          <div className="p-4 border-t border-white/10">
+          <div className="p-4" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}>
             <div className="flex gap-3">
               <input
                 type="text"
@@ -65,7 +74,8 @@ const AiChat = () => {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleSend()}
                 placeholder="Message..."
-                className="flex-1 bg-white/10 text-white px-5 py-3 text-sm rounded-full border border-white/15 focus:outline-none focus:ring-2 focus:ring-sky-400 placeholder:text-white/40"
+                className="flex-1 text-white px-5 py-3 text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-sky-400 placeholder:text-white/40"
+                style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}
               />
               <button
                 onClick={handleSend}

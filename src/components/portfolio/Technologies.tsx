@@ -10,7 +10,7 @@ const Technologies = () => {
     <section id="tech" className="py-12">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center">
-          <span className="text-primary">&lt;/&gt;</span> Technologies
+          Technologies
         </h2>
         <div className="flex flex-wrap gap-3 justify-center">
           {techs.map((tech, i) => (

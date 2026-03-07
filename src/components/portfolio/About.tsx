@@ -16,9 +16,9 @@ const About = () => {
         }}
       >
         {/* Stat Cards */}
-        <div className="grid grid-cols-2 gap-4 mb-8">
+        <div className="flex justify-center mb-8">
           <div
-            className="rounded-xl p-5 flex flex-col items-center text-center gap-2"
+            className="rounded-xl p-5 flex flex-col items-center text-center gap-2 w-full max-w-xs"
             style={{
               background: 'rgba(255, 255, 255, 0.06)',
               border: '1px solid rgba(255, 255, 255, 0.12)',

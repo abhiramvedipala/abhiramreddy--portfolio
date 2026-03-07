@@ -13,7 +13,8 @@ const Hero = () => {
     <section className="min-h-screen py-20 flex flex-col items-center justify-center relative">
       <div className="text-center max-w-3xl">
         <h1 className="md:text-5xl lg:text-6xl text-white mb-6 leading-tight animate-float-slow font-pixel tracking-tight text-2xl whitespace-nowrap" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
-          Abhiram Vedipala
+          Abhiram Reddy
+  
         </h1>
         <p className="md:text-lg mb-4 text-white/90 font-pixel tracking-wide uppercase text-lg" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
           Data Science and AI Engineer
@@ -21,10 +22,9 @@ const Hero = () => {
         <p className="md:text-xl mb-10 max-w-xl mx-auto leading-relaxed text-white/80 font-pixel-body text-center text-lg" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
           Driven by curiosity. Grounded by logic. Fueled by purpose.
         </p>
-        <button
-          onClick={scrollToProjects}
-          className="mb-10 px-8 py-3 bg-white text-black font-bold border-2 border-black rounded-none hover:bg-gray-100 transition-colors text-sm tracking-wide"
-          style={{ fontFamily: "'Inter', sans-serif" }}>
+        <button onClick={scrollToProjects}
+        className="mb-10 px-8 py-3 bg-white text-black font-bold border-2 border-black rounded-none hover:bg-gray-100 transition-colors text-sm tracking-wide"
+        style={{ fontFamily: "'Inter', sans-serif" }}>
           
           View My Work
         </button>

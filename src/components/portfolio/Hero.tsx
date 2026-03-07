@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <section className="min-h-screen py-20 flex flex-col items-center justify-center relative">
       <div className="text-center max-w-3xl">
-        <h1 className="md:text-5xl lg:text-6xl text-white mb-6 leading-tight animate-float-slow font-pixel tracking-tight text-2xl whitespace-nowrap" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
+        <h1 className="md:text-5xl lg:text-6xl text-white mb-6 leading-tight animate-float-slow font-pixel tracking-tight text-2xl text-center" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
           Abhiram Reddy Vedipala 
   
         </h1>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Sparkles } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const FloatingChatButton = () => {
   const [hovered, setHovered] = useState(false);
@@ -22,13 +22,12 @@ const FloatingChatButton = () => {
         onClick={scrollToChat}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative w-14 h-14 rounded-full flex items-center justify-center text-white shadow-xl transition-transform duration-200 hover:scale-110 cursor-pointer"
+        className="relative w-14 h-14 rounded-full flex items-center justify-center text-white shadow-xl transition-transform duration-200 hover:scale-110 cursor-pointer border-2 border-white/20"
         style={{ background: "linear-gradient(135deg, #7c3aed, #2563eb)" }}
         aria-label="Chat with AI"
       >
-        {/* Glow ring */}
         <span className="absolute inset-0 rounded-full animate-[glow-pulse_2.5s_ease-in-out_infinite] pointer-events-none" />
-        <Sparkles size={24} />
+        <MessageCircle size={24} />
       </button>
     </div>
   );

@@ -6,6 +6,7 @@ import Technologies from "@/components/portfolio/Technologies";
 import Projects from "@/components/portfolio/Projects";
 import AiChat from "@/components/portfolio/AiChat";
 import Contact from "@/components/portfolio/Contact";
+import ScrollReveal from "@/components/portfolio/ScrollReveal";
 import heroBg from "@/assets/hero-bg.png";
 
 const Index = () => {
@@ -23,11 +24,11 @@ const Index = () => {
         <Navigation />
         <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Hero />
-          <About />
-          <Technologies />
-          <Projects />
-          <AiChat />
-          <Contact />
+          <ScrollReveal><About /></ScrollReveal>
+          <ScrollReveal delay={80}><Technologies /></ScrollReveal>
+          <ScrollReveal delay={80}><Projects /></ScrollReveal>
+          <ScrollReveal delay={80}><AiChat /></ScrollReveal>
+          <ScrollReveal delay={80}><Contact /></ScrollReveal>
         </main>
         <footer className="border-t border-white/10 py-8 text-center px-4">
           <div className="flex justify-center gap-4 mb-4">

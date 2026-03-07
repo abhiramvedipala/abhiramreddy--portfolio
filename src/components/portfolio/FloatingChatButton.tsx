@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MessageCircle } from "lucide-react";
+import chatBotIcon from "@/assets/chat-bot-icon.png";
 
 const FloatingChatButton = () => {
   const [hovered, setHovered] = useState(false);
@@ -22,7 +22,7 @@ const FloatingChatButton = () => {
         onClick={scrollToChat}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative w-14 h-14 rounded-full flex items-center justify-center text-white shadow-xl transition-transform duration-200 hover:scale-110 cursor-pointer"
+        className="relative w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition-transform duration-200 hover:scale-110 cursor-pointer"
         style={{
           background: 'rgba(255, 255, 255, 0.1)',
           backdropFilter: 'blur(12px)',
@@ -31,8 +31,7 @@ const FloatingChatButton = () => {
         }}
         aria-label="Chat with AI"
       >
-        
-        <MessageCircle size={24} />
+        <img src={chatBotIcon} alt="Chat bot" className="w-6 h-6 invert" />
       </button>
     </div>
   );

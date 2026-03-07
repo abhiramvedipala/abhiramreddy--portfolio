@@ -96,6 +96,10 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-3px)" },
         },
+        "glow-pulse": {
+          "0%, 100%": { boxShadow: "0 0 8px 2px rgba(124,58,237,0.4)" },
+          "50%": { boxShadow: "0 0 20px 8px rgba(37,99,235,0.5)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

@@ -16,7 +16,7 @@ const Technologies = () => {
           {techs.map((tech, i) => (
             <span
               key={tech}
-              className="bg-black/40 backdrop-blur-sm text-white/90 font-pixel text-[8px] md:text-[10px] px-4 py-2 cursor-default border border-white/20 rounded-full animate-float-pill hover:scale-110 hover:bg-white/20 transition-all"
+              className="bg-black/60 backdrop-blur-md text-white/90 font-pixel text-[8px] md:text-[10px] px-4 py-2 cursor-default border border-white/20 rounded-full animate-float-pill hover:scale-110 hover:bg-white/20 transition-all"
               style={{ animationDelay: `${i * 0.15}s` }}
             >
               {tech}

@@ -7,6 +7,7 @@ import Projects from "@/components/portfolio/Projects";
 import AiChat from "@/components/portfolio/AiChat";
 import Contact from "@/components/portfolio/Contact";
 import ScrollReveal from "@/components/portfolio/ScrollReveal";
+import FloatingChatButton from "@/components/portfolio/FloatingChatButton";
 import heroBg from "@/assets/hero-bg.png";
 
 const Index = () => {
@@ -21,6 +22,7 @@ const Index = () => {
       <div className="relative z-10">
         <Navigation />
         <Hero />
+        <FloatingChatButton />
         <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal><About /></ScrollReveal>
             <ScrollReveal delay={80}><Technologies /></ScrollReveal>

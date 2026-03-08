@@ -16,11 +16,11 @@ const projects = [
     live: "#",
   },
   {
-    title: "Smart Home Dashboard",
-    desc: "IoT dashboard for monitoring and controlling connected home devices in real time.",
-    tags: ["React", "Firebase", "Arduino"],
-    github: "#",
-    live: "#",
+    title: "Spotify Music Recommender",
+    desc: "Full-stack ML pipeline that analyzes 81,343 songs to deliver personalized music recommendations using cosine similarity and KMeans clustering. Built a live Streamlit dashboard with 3 pages, descriptive stats with 4 charts, and AWS S3 data lake simulation via LocalStack.",
+    tags: ["Python", "pandas", "scikit-learn", "Streamlit", "AWS S3", "KMeans", "Docker"],
+    github: "https://github.com/abhiramvedipala/spotify-music-recommender",
+    live: "",
   },
 ];
 
@@ -59,10 +59,12 @@ const Projects = () => {
                   <Github size={14} />
                   <span className="font-pixel text-[7px]">CODE</span>
                 </a>
-                <a href={p.live} className="bg-primary/80 text-white hover:bg-primary rounded-lg px-3 py-2 inline-flex items-center gap-1 transition-colors">
-                  <ExternalLink size={14} />
-                  <span className="font-pixel text-[7px]">LIVE</span>
-                </a>
+                {p.live && (
+                  <a href={p.live} className="bg-primary/80 text-white hover:bg-primary rounded-lg px-3 py-2 inline-flex items-center gap-1 transition-colors">
+                    <ExternalLink size={14} />
+                    <span className="font-pixel text-[7px]">LIVE</span>
+                  </a>
+                )}
               </div>
             </div>
           ))}

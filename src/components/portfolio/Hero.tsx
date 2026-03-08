@@ -23,8 +23,8 @@ const Hero = () => {
           Driven by curiosity. Grounded by logic. Fueled by purpose.
         </p>
         <button onClick={scrollToProjects}
-        className="mb-10 px-8 py-3 bg-white text-black font-bold border-2 border-black rounded-none hover:bg-gray-100 transition-colors text-sm tracking-wide"
-        style={{ fontFamily: "'Inter', sans-serif" }}>
+        className="mb-10 px-8 py-3 bg-white text-black font-bold border-[3px] border-black rounded-none hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none transition-all text-sm tracking-wide"
+        style={{ fontFamily: "'Inter', sans-serif", boxShadow: '4px 4px 0px #000' }}>
           
           View My Work
         </button>

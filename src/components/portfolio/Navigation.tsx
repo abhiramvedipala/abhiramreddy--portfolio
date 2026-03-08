@@ -11,7 +11,7 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
         <a href="#" className="flex-shrink-0">
-          <span className="px-3 py-1.5 border-[3px] border-black font-black text-lg text-black tracking-tight">
+          <span className="px-3 py-1.5 border-[3px] border-black font-black text-lg text-black tracking-tight inline-block" style={{ boxShadow: '4px 4px 0px #000' }}>
             AV
           </span>
         </a>

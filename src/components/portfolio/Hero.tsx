@@ -19,7 +19,7 @@ const Hero = () => {
         <p className="sm:text-base md:text-lg mb-4 text-white/90 font-pixel tracking-wide uppercase whitespace-nowrap text-xs" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
           Data Science and AI Engineer
         </p>
-        <p className="md:text-xl mb-10 max-w-xl mx-auto leading-relaxed text-white/80 font-pixel-body text-center text-sm" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
+        <p className="md:text-xl mb-10 max-w-xl mx-auto leading-relaxed text-white/80 font-pixel-body text-center text-xs" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
           Driven by curiosity. Grounded by logic. Fueled by purpose.
         </p>
         <button onClick={scrollToProjects}

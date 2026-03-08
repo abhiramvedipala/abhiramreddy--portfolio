@@ -12,14 +12,14 @@ const Hero = () => {
   return (
     <section className="min-h-screen py-20 flex flex-col items-center justify-center relative">
       <div className="text-center w-full px-4">
-        <h1 className="sm:text-2xl md:text-3xl lg:text-[2.75rem] text-white mb-6 leading-tight animate-float-slow font-pixel tracking-tight text-center whitespace-nowrap text-sm" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
+        <h1 className="md:text-3xl lg:text-[2.75rem] text-white mb-6 leading-tight animate-float-slow font-pixel tracking-tight text-center whitespace-nowrap sm:text-3xl text-2xl" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
           Abhiram Reddy Vedipala 
   
         </h1>
         <p className="sm:text-base md:text-lg mb-4 text-white/90 font-pixel tracking-wide uppercase whitespace-nowrap text-xs" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
           Data Science and AI Engineer
         </p>
-        <p className="md:text-xl mb-10 max-w-xl mx-auto leading-relaxed text-white/80 font-pixel-body text-center text-xs" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
+        <p className="md:text-xl mb-10 max-w-xl mx-auto leading-relaxed text-white/80 font-pixel-body text-center text-sm" style={{ textShadow: '0px 2px 12px rgba(0,0,0,0.75)' }}>
           Driven by curiosity. Grounded by logic. Fueled by purpose.
         </p>
         <button onClick={scrollToProjects}

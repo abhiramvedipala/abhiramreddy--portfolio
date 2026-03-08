@@ -59,10 +59,12 @@ const Projects = () => {
                   <Github size={14} />
                   <span className="font-pixel text-[7px]">CODE</span>
                 </a>
-                <a href={p.live} className="bg-primary/80 text-white hover:bg-primary rounded-lg px-3 py-2 inline-flex items-center gap-1 transition-colors">
-                  <ExternalLink size={14} />
-                  <span className="font-pixel text-[7px]">LIVE</span>
-                </a>
+                {p.live && (
+                  <a href={p.live} className="bg-primary/80 text-white hover:bg-primary rounded-lg px-3 py-2 inline-flex items-center gap-1 transition-colors">
+                    <ExternalLink size={14} />
+                    <span className="font-pixel text-[7px]">LIVE</span>
+                  </a>
+                )}
               </div>
             </div>
           ))}

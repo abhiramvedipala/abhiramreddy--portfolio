@@ -54,6 +54,8 @@ const Projects = () => {
               <div className="flex gap-3">
                 <a
                   href={p.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white/10 text-white rounded-lg px-3 py-2 inline-flex items-center gap-1 transition-colors hover:bg-white/20"
                 >
                   <Github size={14} />

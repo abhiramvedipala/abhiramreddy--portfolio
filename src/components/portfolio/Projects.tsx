@@ -16,11 +16,11 @@ const projects = [
     live: "#",
   },
   {
-    title: "Smart Home Dashboard",
-    desc: "IoT dashboard for monitoring and controlling connected home devices in real time.",
-    tags: ["React", "Firebase", "Arduino"],
-    github: "#",
-    live: "#",
+    title: "Spotify Music Recommender",
+    desc: "Full-stack ML pipeline that analyzes 81,343 songs to deliver personalized music recommendations using cosine similarity and KMeans clustering. Built a live Streamlit dashboard with 3 pages, descriptive stats with 4 charts, and AWS S3 data lake simulation via LocalStack.",
+    tags: ["Python", "pandas", "scikit-learn", "Streamlit", "AWS S3", "KMeans", "Docker"],
+    github: "https://github.com/abhiramvedipala/spotify-music-recommender",
+    live: "",
   },
 ];
 

@@ -1,8 +1,9 @@
 const techs = [
-  "TypeScript", "React", "Node.js", "Python", "Go",
-  "PostgreSQL", "MongoDB", "Redis", "Docker", "Kubernetes",
-  "AWS", "GraphQL", "Next.js", "Tailwind CSS", "Rust",
-  "Git", "Linux", "Figma", "Supabase", "Vite",
+  "Python", "Pandas", "NumPy", "Scikit-learn",
+  "PyTorch", "HuggingFace", "LangChain", "Jupyter",
+  "SQL", "Matplotlib", "FastAPI", "REST APIs",
+  "React", "TypeScript", "Node.js", "Tailwind CSS",
+  "PostgreSQL", "Docker", "AWS", "Git",
 ];
 
 const Technologies = () => {

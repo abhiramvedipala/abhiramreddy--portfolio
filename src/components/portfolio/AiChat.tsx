@@ -39,9 +39,7 @@ const AiChat = () => {
         >
           <div className="h-80 flex flex-col items-center justify-end p-6 space-y-2">
             {messages.length === 0 ? (
-              <div className="flex-1 flex flex-col items-center justify-end pb-4 space-y-2">
-                <p className="text-white/50 text-lg font-medium">Start a conversation...</p>
-              </div>
+              <div className="flex-1" />
             ) : (
               <div className="flex-1 w-full overflow-y-auto space-y-3">
                 {messages.map((m, i) => (

@@ -31,7 +31,7 @@ const FloatingChatButton = () => {
         }}
         aria-label="Chat with AI"
       >
-        <img src={chatBotIcon} alt="Chat bot" className="w-6 h-6 invert" />
+        <img src={chatBotIcon} alt="Chat bot" className="w-6 h-6 invert animate-float-slow" />
       </button>
     </div>
   );

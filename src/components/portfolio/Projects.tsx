@@ -9,11 +9,11 @@ const projects = [
     live: "#",
   },
   {
-    title: "E-Commerce Platform",
-    desc: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
-    tags: ["Next.js", "Node.js", "MongoDB"],
-    github: "#",
-    live: "#",
+    title: "Job Automation",
+    desc: "An automated job application pipeline that streamlines the job search process with intelligent automation and tracking.",
+    tags: ["Python", "Automation", "Selenium", "REST APIs"],
+    github: "https://github.com/abhiramvedipala/job-automation",
+    live: "",
   },
   {
     title: "Spotify Music Recommender",

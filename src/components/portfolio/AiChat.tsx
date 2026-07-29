@@ -1,12 +1,19 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 
-const CHAT_API_URL = import.meta.env.VITE_CHAT_API_URL as string | undefined;
+// The deployed portfolio-rag backend. Not a secret -- it ships in the bundle
+// and is visible in any browser's network tab -- so it is the default rather
+// than required config, and the build works anywhere without env setup.
+// VITE_CHAT_API_URL overrides it when pointing at a local backend.
+const CHAT_API_URL =
+  (import.meta.env.VITE_CHAT_API_URL as string | undefined) ??
+  "https://portfolio-rag-chatbot-feature-abhiram.onrender.com";
 
 const AiChat = () => {
   const [messages, setMessages] = useState<{role: "user" | "assistant"; content: string;}[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [slow, setSlow] = useState(false);
 
   const handleSend = async () => {
     if (!input.trim() || loading) return;
@@ -15,14 +22,9 @@ const AiChat = () => {
     setInput("");
     setLoading(true);
 
-    if (!CHAT_API_URL) {
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", content: "Chat backend isn't configured yet (missing VITE_CHAT_API_URL)." },
-      ]);
-      setLoading(false);
-      return;
-    }
+    // The backend sleeps when idle and takes ~50s to wake. Without this the
+    // first visitor of the day just watches "Typing..." and assumes it broke.
+    const slowTimer = setTimeout(() => setSlow(true), 4000);
 
     try {
       const res = await fetch(`${CHAT_API_URL}/chat`, {
@@ -39,6 +41,8 @@ const AiChat = () => {
         { role: "assistant", content: "Sorry, I couldn't reach the AI backend right now. Please try again shortly." },
       ]);
     } finally {
+      clearTimeout(slowTimer);
+      setSlow(false);
       setLoading(false);
     }
   };
@@ -80,7 +84,9 @@ const AiChat = () => {
                 {loading && (
                   <div className="flex justify-start">
                     <div className="text-white/90 p-4 text-sm rounded-xl" style={{ background: 'rgba(255,255,255,0.1)' }}>
-                      <span className="animate-pulse">Typing...</span>
+                      <span className="animate-pulse">
+                        {slow ? "Waking up the server, this can take up to a minute..." : "Typing..."}
+                      </span>
                     </div>
                   </div>
                 )}

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 
+const CHAT_API_URL = import.meta.env.VITE_CHAT_API_URL as string | undefined;
+
 const AiChat = () => {
   const [messages, setMessages] = useState<{role: "user" | "assistant"; content: string;}[]>([]);
   const [input, setInput] = useState("");
@@ -8,18 +10,37 @@ const AiChat = () => {
 
   const handleSend = async () => {
     if (!input.trim() || loading) return;
-    const userMsg = { role: "user" as const, content: input.trim() };
-    setMessages((prev) => [...prev, userMsg]);
+    const question = input.trim();
+    setMessages((prev) => [...prev, { role: "user", content: question }]);
     setInput("");
     setLoading(true);
 
-    setTimeout(() => {
+    if (!CHAT_API_URL) {
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "Thanks for your message! The AI backend isn't connected yet." }
+        { role: "assistant", content: "Chat backend isn't configured yet (missing VITE_CHAT_API_URL)." },
       ]);
       setLoading(false);
-    }, 1000);
+      return;
+    }
+
+    try {
+      const res = await fetch(`${CHAT_API_URL}/chat`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question }),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      setMessages((prev) => [...prev, { role: "assistant", content: data.answer }]);
+    } catch (err) {
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: "Sorry, I couldn't reach the AI backend right now. Please try again shortly." },
+      ]);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

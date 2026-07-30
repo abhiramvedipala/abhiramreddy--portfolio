@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Send } from "lucide-react";
+
 
 // The deployed portfolio-rag backend. Not a secret -- it ships in the bundle
 // and is visible in any browser's network tab -- so it is the default rather

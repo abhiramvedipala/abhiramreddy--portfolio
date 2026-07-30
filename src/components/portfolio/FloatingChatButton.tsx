@@ -22,7 +22,7 @@ const FloatingChatButton = () => {
         onClick={scrollToChat}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition-transform duration-200 hover:scale-110 cursor-pointer"
+        className="relative w-[3.85rem] h-[3.85rem] rounded-full flex items-center justify-center shadow-xl transition-transform duration-100 ease-out hover:scale-110 active:scale-95 cursor-pointer touch-manipulation"
         style={{
           background: 'rgba(255, 255, 255, 0.1)',
           backdropFilter: 'blur(12px)',
@@ -31,8 +31,14 @@ const FloatingChatButton = () => {
         }}
         aria-label="Chat with AI"
       >
-        <img src={chatBotIcon} alt="Chat bot" className="w-6 h-6 invert animate-float-slow" />
+        <img
+          src={chatBotIcon}
+          alt="Chat bot"
+          draggable={false}
+          className="block w-[1.65rem] h-[1.65rem] invert select-none pointer-events-none"
+        />
       </button>
+
     </div>
   );
 };

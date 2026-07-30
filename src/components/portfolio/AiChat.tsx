@@ -102,12 +102,14 @@ const AiChat = () => {
                     </div>
                   </div>
                 )}
+                <div ref={bottomRef} />
               </div>
             )}
           </div>
           <div className="p-4" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}>
             <div className="flex gap-3">
               <input
+                ref={inputRef}
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
@@ -116,6 +118,7 @@ const AiChat = () => {
                 className="flex-1 text-white px-5 py-3 text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-sky-400 placeholder:text-white/40"
                 style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}
               />
+
               <button
                 onClick={handleSend}
                 disabled={loading}

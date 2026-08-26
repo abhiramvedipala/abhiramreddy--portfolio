@@ -4,7 +4,7 @@
 
 ---
 
-## About
+## Aboutmdmkzkxkzkozosodoxijskwkz b
 
 A fantasy/RPG-themed personal portfolio website built to showcase my journey as a Data Science and AI Engineering student at Florida International University. The site features a medieval pixel-art aesthetic, glassmorphism UI, an AI-powered chat assistant, and smooth scroll interactions.
 
